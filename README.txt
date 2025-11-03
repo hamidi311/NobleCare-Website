@@ -9,6 +9,7 @@ On each submission it:
 
 ## Quick deploy on Vercel (free)
 1. Create a free account at vercel.com and install Vercel CLI (optional).
+
 2. Click “New Project” → **Import** this folder or drag & drop it.
 3. In *Project Settings → Environment Variables*, add the keys from `.env.example`:
    - `MAIL_FROM`, `MAIL_APP_PASSWORD`, `MAIL_TO`
