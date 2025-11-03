@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "dependencies": {
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^6.9.13",
+    "twilio": "^4.21.0"
   }
 }

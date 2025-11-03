@@ -9,7 +9,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-800">
-  <!-- Header -->
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -26,10 +25,8 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 opacity-90"></div>
-    <svg class="absolute -top-20 -right-20 w-[36rem] opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M40.5,-61.7C55.2,-55.7,71.1,-46.5,78.2,-33.2C85.4,-20,83.9,-2.6,79.9,13.6C76,29.9,69.6,44.9,58.3,56.8C47,68.7,30.7,77.5,13.7,79.9C-3.2,82.3,-20.8,78.3,-35.1,70.1C-49.3,61.9,-60.3,49.5,-68.9,34.9C-77.6,20.3,-83.8,3.6,-82.2,-12.1C-80.6,-27.8,-71.2,-42.5,-58.6,-51.4C-46,-60.4,-30.2,-63.6,-15.2,-68.2C-0.1,-72.9,14.2,-78.9,27.3,-76.8C40.3,-74.6,52.1,-64.4,40.5,-61.7Z" transform="translate(100 100)"/></svg>
     <div class="relative max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
       <div class="text-white">
         <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Compassionate, Reliable <span class="whitespace-nowrap">Medical Transportation</span></h2>
@@ -52,54 +49,12 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="mb-8">
-      <h3 class="text-2xl md:text-3xl font-bold">Services</h3>
-      <p class="mt-2 text-slate-600">Professional Non‑Emergency Medical Transportation (NEMT) across Greater Boston.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-3xl shadow p-6 border border-slate-200">
-        <h4 class="text-lg font-semibold">Clinic &amp; Hospital Appointments</h4>
-        <p class="mt-2 text-slate-600">On‑time rides to primary care, specialists, imaging, and outpatient visits.</p>
-      </div>
-      <div class="bg-white rounded-3xl shadow p-6 border border-slate-200">
-        <h4 class="text-lg font-semibold">Dialysis &amp; Therapy</h4>
-        <p class="mt-2 text-slate-600">Reliable recurring trips for dialysis, physical therapy, and rehab.</p>
-      </div>
-      <div class="bg-white rounded-3xl shadow p-6 border border-slate-200">
-        <h4 class="text-lg font-semibold">Wheelchair Assistance</h4>
-        <p class="mt-2 text-slate-600">Door‑to‑door help and secure transport for mobility devices.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="bg-white border-y border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h3 class="text-2xl md:text-3xl font-bold">About NobleCare Mobility</h3>
-        <p class="mt-4 text-slate-700 leading-relaxed">We’re a local, family‑run transport service dedicated to safe, respectful care. Our mission is simple: help patients and seniors get to care comfortably and on time. We serve hospitals, clinics, and families throughout Boston, Revere, Chelsea, Somerville, and surrounding communities.</p>
-        <ul class="mt-6 space-y-2 text-slate-700">
-          <li>&bull; Fully insured &bull; Punctual &bull; Patient‑first</li>
-          <li>&bull; Clean vehicles &bull; Professional drivers</li>
-        </ul>
-      </div>
-      <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200">
-        <h4 class="text-lg font-semibold">Coverage Area</h4>
-        <p class="mt-2 text-slate-600">Greater Boston · North Shore · Communities around Revere, MA</p>
-        <h4 class="mt-6 text-lg font-semibold">Hours</h4>
-        <p class="mt-2 text-slate-600">Mon–Fri: 7:00 AM – 7:00 PM · Sat: 9:00 AM – 4:00 PM · Sun: Closed</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Book a Ride -->
   <section id="book" class="max-w-3xl mx-auto px-4 py-16">
     <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 md:p-8">
       <h3 class="text-2xl font-bold">Request a Ride</h3>
       <p class="mt-2 text-slate-600">Prefer to call? <a href="tel:+18573339639" class="text-blue-700 underline">(857) 333‑9639</a></p>
 
+      <!-- The form now POSTs to /api/contact and shows a result message -->
       <form class="mt-6 grid grid-cols-1 gap-4" action="/api/contact" method="post">
         <div class="grid md:grid-cols-2 gap-4">
           <label class="block">
@@ -141,47 +96,13 @@
           <textarea class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Notes" placeholder="Any special assistance needed (e.g., escort to clinic, language help)"></textarea>
         </label>
         <button type="submit" class="mt-2 w-full md:w-auto px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow hover:shadow-lg transition">Send Request</button>
-        <p class="text-xs text-slate-500">Submitting opens your email app with the request details pre‑filled to send to us.</p>
+        <p id="status" class="text-sm text-slate-600 mt-2"></p>
       </form>
     </div>
   </section>
 
-  <!-- Contact strip -->
-  <section class="bg-blue-50 border-y border-blue-100">
-    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-700 font-medium">Need a same‑day ride? Call now for availability.</p>
-      <a href="tel:+18573339639" class="px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow hover:shadow-lg transition">Call (857) 333‑9639</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-white">
-    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
-      <div>
-        <div class="flex items-center gap-3">
-          <div class="h-9 w-9 rounded-xl bg-blue-600 grid place-items-center text-white font-bold">NC</div>
-          <span class="font-semibold">NobleCare Mobility LLC</span>
-        </div>
-        <p class="mt-3 text-slate-600 text-sm">Serving Greater Boston & North Shore<br/>Revere, Massachusetts</p>
-        <p class="mt-2 text-slate-600 text-sm">Office: 6 Dolphin Ave #2, Revere, MA 02151</p>
-      </div>
-      <div>
-        <h5 class="font-semibold">Quick Links</h5>
-        <ul class="mt-2 space-y-1 text-slate-600 text-sm">
-          <li><a href="#services" class="hover:underline">Services</a></li>
-          <li><a href="#book" class="hover:underline">Book a Ride</a></li>
-          <li><a href="#about" class="hover:underline">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="font-semibold">Contact</h5>
-        <p class="mt-2 text-slate-600 text-sm">
-          Phone: <a href="tel:+18573339639" class="text-blue-700 hover:underline">(857) 333‑9639</a><br/>
-          Email: <a href="mailto:noblecaremobility@gmail.com" class="text-blue-700 hover:underline">noblecaremobility@gmail.com</a>
-        </p>
-      </div>
-    </div>
-    <div class="border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-center text-xs text-slate-500">
       © 2025 NobleCare Mobility LLC. All rights reserved.
     </div>
   </footer>
@@ -189,10 +110,8 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('section#book form');
+  const statusEl = document.getElementById('status');
   const btn = form.querySelector('button[type="submit"]');
-  const statusEl = document.createElement('p');
-  statusEl.className = 'text-sm mt-2';
-  form.appendChild(statusEl);
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -205,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
       });
-      const out = await res.json();
+      const out = await res.json().catch(() => ({}));
       if (res.ok) {
         statusEl.textContent = 'Request received! We will contact you shortly.';
         form.reset();
@@ -220,6 +139,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }, false);
 });
 </script>
-
 </body>
 </html>
