@@ -110,32 +110,30 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('section#book form');
-  const statusEl = document.getElementById('status');
   const btn = form.querySelector('button[type="submit"]');
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    statusEl.textContent = 'Sending...';
     btn.disabled = true;
-    const data = Object.fromEntries(new FormData(form).entries());
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(data)
-      });
-      const out = await res.json().catch(() => ({}));
-      if (res.ok) {
-        statusEl.textContent = 'Request received! We will contact you shortly.';
-        form.reset();
-      } else {
-        statusEl.textContent = out.error || 'Something went wrong. Please call (857) 333-9639.';
-      }
-    } catch (err) {
-      statusEl.textContent = 'Network error. Please call (857) 333-9639.';
-    } finally {
-      btn.disabled = false;
-    }
+
+    const d = new FormData(form);
+
+    const text =
+      "New Ride Request:\n" +
+      "Name: " + (d.get('name') || '') + "\n" +
+      "Contact: " + (d.get('phone') || '') + "\n" +
+      "Pickup: " + (d.get('pickup') || '') + "\n" +
+      "Drop-off: " + (d.get('dropoff') || '') + "\n" +
+      "Date: " + (d.get('date') || '') + "\n" +
+      "Time: " + (d.get('time') || '') + "\n" +
+      "Notes: " + (d.get('notes') || '');
+
+    // T-Mobile SMS
+    const sms = "sms:8573339639?&body=" + encodeURIComponent(text);
+
+    window.location.href = sms;
+
+    setTimeout(() => { btn.disabled = false; }, 2000);
   }, false);
 });
 </script>
