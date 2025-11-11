@@ -8,8 +8,10 @@
   <link rel="icon" href="data:,">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="min-h-screen bg-slate-50 text-slate-800">
-  <!-- Header -->
+
+  <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
@@ -19,6 +21,7 @@
           <p class="text-xs text-slate-500">Non-Emergency Medical Transportation (NEMT)</p>
         </div>
       </a>
+
       <nav class="flex items-center gap-2">
         <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-slate-100">About</a>
         <a href="tel:+18573339639" class="hidden md:inline-block px-4 py-2 rounded-xl bg-blue-600 text-white font-medium shadow hover:shadow-md transition">Call: (857) 333-9639</a>
@@ -27,90 +30,92 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 opacity-90"></div>
     <div class="relative max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
       <div class="text-white">
         <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Compassionate, Reliable <span class="whitespace-nowrap">Medical Transportation</span></h2>
         <p class="mt-4 text-blue-50 text-lg">Door-to-door assistance for appointments, dialysis, hospital discharges, and more — serving Greater Boston with care and dignity.</p>
+
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="tel:+18573339639" class="px-5 py-3 rounded-2xl bg-white text-blue-700 font-semibold shadow hover:shadow-lg transition">Call (857) 333-9639</a>
           <a href="#book" class="px-5 py-3 rounded-2xl bg-blue-700/40 border border-white/40 text-white font-semibold hover:bg-blue-700/60 transition">Request a Ride</a>
         </div>
+
         <p class="mt-3 text-sm text-blue-100">Open 7 days · Same-day rides when available</p>
       </div>
+
       <div class="bg-white rounded-3xl shadow-xl p-6 md:p-8">
         <h3 class="text-xl font-semibold">Why families choose NobleCare</h3>
         <ul class="mt-4 space-y-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-blue-600"></span> Trained, courteous drivers with patient-first service</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-blue-600"></span> Wheelchair-friendly vehicles (upon request)</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-blue-600"></span> Door-through-door assistance (we help in and out)</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-blue-600"></span> On-time, insured, and HIPAA-aware practices</li>
+          <li class="flex gap-3"><span class="h-2 w-2 rounded-full bg-blue-600 mt-1"></span> Trained, courteous drivers with patient-first service</li>
+          <li class="flex gap-3"><span class="h-2 w-2 rounded-full bg-blue-600 mt-1"></span> Wheelchair-friendly vehicles (upon request)</li>
+          <li class="flex gap-3"><span class="h-2 w-2 rounded-full bg-blue-600 mt-1"></span> Door-through-door assistance</li>
+          <li class="flex gap-3"><span class="h-2 w-2 rounded-full bg-blue-600 mt-1"></span> On-time, insured, and HIPAA-aware practices</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Booking Form -->
+  <!-- BOOKING FORM -->
   <section id="book" class="max-w-3xl mx-auto px-4 py-16">
     <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 md:p-8">
       <h3 class="text-2xl font-bold">Request a Ride</h3>
       <p class="mt-2 text-slate-600">Prefer to call? <a href="tel:+18573339639" class="text-blue-700 underline">(857) 333-9639</a></p>
 
-      <form class="mt-6 grid grid-cols-1 gap-4" action="/api/contact" method="post">
+      <form class="mt-6 grid grid-cols-1 gap-4">
         <div class="grid md:grid-cols-2 gap-4">
-          <label class="block">
-            <span class="text-sm text-slate-600">Your Name</span>
-            <input required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Name" placeholder="Full name" />
-          </label>
-          <label class="block">
-            <span class="text-sm text-slate-600">Phone</span>
-            <input required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Phone" placeholder="(###) ###-####" />
-          </label>
+          <input required name="name" placeholder="Your Name" class="rounded-xl border border-slate-300 px-3 py-2">
+          <input required name="phone" placeholder="Phone Number" class="rounded-xl border border-slate-300 px-3 py-2">
         </div>
-        <label class="block">
-          <span class="text-sm text-slate-600">Pickup Address</span>
-          <input required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Pickup Address" placeholder="Street, City" />
-        </label>
-        <label class="block">
-          <span class="text-sm text-slate-600">Drop-off Address</span>
-          <input required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Dropoff Address" placeholder="Facility or clinic name" />
-        </label>
+
+        <input required name="pickup" placeholder="Pickup Address" class="rounded-xl border border-slate-300 px-3 py-2">
+        <input required name="dropoff" placeholder="Drop-off Address (Clinic / Facility)" class="rounded-xl border border-slate-300 px-3 py-2">
+
         <div class="grid md:grid-cols-3 gap-4">
-          <label class="block">
-            <span class="text-sm text-slate-600">Date</span>
-            <input required type="date" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Date" />
-          </label>
-          <label class="block">
-            <span class="text-sm text-slate-600">Time</span>
-            <input required type="time" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Time" />
-          </label>
-          <label class="block">
-            <span class="text-sm text-slate-600">Wheelchair?</span>
-            <select class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Wheelchair">
-              <option>No</option>
-              <option>Yes</option>
-            </select>
-          </label>
+          <input required type="date" name="date" class="rounded-xl border border-slate-300 px-3 py-2">
+          <input required type="time" name="time" class="rounded-xl border border-slate-300 px-3 py-2">
+          <select name="wheelchair" class="rounded-xl border border-slate-300 px-3 py-2">
+            <option>No wheelchair needed</option>
+            <option>Yes - Wheelchair Required</option>
+          </select>
         </div>
-        <label class="block">
-          <span class="text-sm text-slate-600">Notes</span>
-          <textarea class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-blue-500" name="Notes" placeholder="Any special assistance needed (e.g., escort to clinic, language help)"></textarea>
-        </label>
-        <button type="submit" class="mt-2 w-full md:w-auto px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow hover:shadow-lg transition">Send Request</button>
-        <p id="status" class="text-sm text-slate-600 mt-2"></p>
+
+        <textarea name="notes" placeholder="Additional Notes (optional)" class="rounded-xl border border-slate-300 px-3 py-2 h-24"></textarea>
+
+        <button type="submit" class="mt-3 px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow hover:shadow-lg transition">
+          Send Request
+        </button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="bg-white border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-6 text-center text-xs text-slate-500">
       © 2025 NobleCare Mobility LLC. All rights reserved. · <a href="about.html" class="underline">About</a>
     </div>
   </footer>
 
-  <!-- (Optional) SMS fallback script you had before can be kept or removed -->
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const data = new FormData(this);
+  const text =
+    `New Ride Request:\n`+
+    `Name: ${data.get('name')}\n`+
+    `Phone: ${data.get('phone')}\n`+
+    `Pickup: ${data.get('pickup')}\n`+
+    `Drop-off: ${data.get('dropoff')}\n`+
+    `Date: ${data.get('date')}\n`+
+    `Time: ${data.get('time')}\n`+
+    `Wheelchair: ${data.get('wheelchair')}\n`+
+    `Notes: ${data.get('notes')}`;
+
+  window.location.href = "sms:8573339639?body=" + encodeURIComponent(text);
+});
+</script>
+
 </body>
 </html>
