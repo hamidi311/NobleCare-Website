@@ -3,31 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us – NobleCare Mobility LLC</title>
+  <title>About — NobleCare Mobility LLC</title>
+  <meta name="description" content="The NobleCare story and values. Professional non-emergency medical transportation for Greater Boston.">
+  <link rel="icon" href="data:,">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="min-h-screen bg-slate-50 text-slate-800">
 
-<body class="bg-slate-50 text-slate-800">
-
-  <div class="max-w-3xl mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold text-center text-blue-700">Our Story</h1>
-    <p class="mt-6 text-lg text-slate-700 leading-relaxed text-center">
-      NobleCare Mobility was started by two best friends, inspired by the grandmothers who raised us
-      with patience, kindness, and love. When they needed help getting to appointments, we realized
-      how important respectful and reliable transportation is for families.
-    </p>
-
-    <p class="mt-4 text-lg text-slate-700 leading-relaxed text-center">
-      We built NobleCare to honor them — and to make sure every passenger is treated with dignity,
-      patience, and care. When we pick someone up, we treat them like family.
-    </p>
-
-    <div class="text-center mt-10">
-      <a href="index.html#book" class="px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow hover:shadow-lg transition">
-        Request a Ride
+  <!-- Header (same as home for consistency) -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-blue-600 grid place-items-center text-white font-bold">NC</div>
+        <div>
+          <h1 class="text-lg font-semibold">NobleCare Mobility LLC</h1>
+          <p class="text-xs text-slate-500">Non-Emergency Medical Transportation (NEMT)</p>
+        </div>
       </a>
+      <nav class="flex items-center gap-2">
+        <a href="about.html" class="px-3 py-2 rounded-xl bg-slate-100">About</a>
+        <a href="tel:+18573339639" class="hidden md:inline-block px-4 py-2 rounded-xl bg-blue-600 text-white font-medium shadow hover:shadow-md transition">Call: (857) 333-9639</a>
+        <a href="index.html#book" class="px-4 py-2 rounded-xl border border-slate-300 bg-white font-medium hover:bg-slate-50">Book a Ride</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <!-- Hero / Story -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 opacity-90"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Image placeholder (swap src when you have a photo) -->
+        <div class="bg-white/5 rounded-3xl aspect-[4/3] md:aspect-[5/4] overflow-hidden ring-1 ring-white/20">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop"
+               alt="Professional medical transportation" class="h-full w-full object-cover">
+        </div>
+
+        <!-- Copy card -->
+        <div class="bg-white rounded-3xl shadow-xl p-6 md:p-8">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Our Story</h2>
+          <p class="mt-4 text-slate-700 leading-relaxed">
+            NobleCare was founded by two best friends as a tribute to our grandmothers. They taught us patience,
+            dignity, and the importance of showing up. We built a service that treats every rider like family while
+            operating with the professionalism clinics and care coordinators expect.
+          </p>
+          <p class="mt-4 text-slate-700 leading-relaxed">
+            Today, we provide on-time, courteous non-emergency medical transportation across Greater Boston—with
+            trained drivers, wheelchair-friendly options (upon request), and door-through-door assistance.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="index.html#book" class="px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow hover:shadow-lg transition">Request a Ride</a>
+            <a href="tel:+18573339639" class="px-5 py-3 rounded-2xl bg-white border border-slate-200 text-slate-800 font-semibold hover:bg-slate-50 transition">Call (857) 333-9639</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="max-w-6xl mx-auto px-4 py-14">
+    <h3 class="text-2xl font-bold">Our Values</h3>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+        <h4 class="font-semibold">Respect & Dignity</h4>
+        <p class="mt-2 text-sm text-slate-600">We greet, assist, and communicate with care—every rider, every time.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+        <h4 class="font-semibold">Reliability</h4>
+        <p class="mt-2 text-sm text-slate-600">On-time pickups, clear ETAs, and proactive updates to families.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+        <h4 class="font-semibold">Safety</h4>
+        <p class="mt-2 text-sm text-slate-600">Trained drivers, clean vehicles, and wheelchair assistance on request.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+        <h4 class="font-semibold">Privacy</h4>
+        <p class="mt-2 text-sm text-slate-600">HIPAA-aware practices for sensitive appointments and destinations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founders -->
+  <section class="max-w-6xl mx-auto px-4 pb-16">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+        <div class="flex items-center gap-4">
+          <div class="h-14 w-14 rounded-2xl bg-slate-200"></div>
+          <div>
+            <h4 class="font-semibold">Co-Founder</h4>
+            <p class="text-sm text-slate-600">Operations & Client Relations</p>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700 text-sm">
+          Oversees scheduling, coordination with clinics, and rider communication to ensure a smooth experience.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+        <div class="flex items-center gap-4">
+          <div class="h-14 w-14 rounded-2xl bg-slate-200"></div>
+          <div>
+            <h4 class="font-semibold">Co-Founder</h4>
+            <p class="text-sm text-slate-600">Driver Training & Safety</p>
+          </div>
+        </div>
+        <p class="mt-3 text-slate-700 text-sm">
+          Leads safety standards, driver onboarding, and wheelchair-assist training for consistent quality.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <a href="index.html#book" class="inline-block px-5 py-3 rounded-2xl bg-blue-600 text-white font-semibold shadow hover:shadow-lg transition">Book a Ride</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-center text-xs text-slate-500">
+      © 2025 NobleCare Mobility LLC. All rights reserved. · <a href="index.html" class="underline">Home</a>
+    </div>
+  </footer>
 
 </body>
 </html>
